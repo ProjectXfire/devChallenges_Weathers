@@ -1,0 +1,49 @@
+@import "../variables.scss";
+.weather-search-container {
+  width: 100%;
+  background-color: $color-primary;
+  padding: 5% 5%;
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    & button {
+      display: flex;
+      background-color: $color-primary;
+      cursor: pointer;
+      color: black;
+      outline: none;
+      border: none;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  &__actions {
+    display: grid;
+    column-gap: 2%;
+    grid-template-columns: 3fr 1fr;
+  }
+  &__input {
+    display: flex;
+    border: 2px solid grey;
+    padding: 2% 5%;
+    & input {
+      width: 100%;
+      background-color: $color-primary;
+      color: grey;
+      border: none;
+      outline: none;
+    }
+  }
+  &__button {
+    padding: 1% 5%;
+    cursor: pointer;
+    background-color: #3949ab;
+    color: white;
+    border: none;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

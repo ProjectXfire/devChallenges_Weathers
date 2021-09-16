@@ -1,0 +1,73 @@
+@import "../variables.scss";
+
+.weather-hightlights {
+  &__title {
+    margin: 0;
+    padding: 5% 0;
+  }
+  &__detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    row-gap: 25px;
+  }
+  &__item {
+    background-color: $color-primary;
+    padding: 10px 15%;
+    text-align: center;
+  }
+  &__progress-bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: $color-bar;
+  }
+  &__progress-bar-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+  }
+  &__name {
+    font-size: 1vw;
+  }
+  &__value {
+    font-size: 4vw;
+    & span {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-hightlights {
+    &__title {
+      padding-top: 20%;
+    }
+    &__detail {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    &__name {
+      font-size: 2.5vw;
+    }
+    &__value {
+      font-size: 7vw;
+      & span {
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .weather-hightlights {
+    &__name {
+      font-size: 4vw;
+    }
+    &__value {
+      font-size: 15vw;
+      & span {
+        font-size: 5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../variables.scss";
+
+.weather-today-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10%;
+  background-color: $color-primary;
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__search {
+    padding: 2% 4%;
+    background-color: $color-button;
+    color: $color-text;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      color: $color-button;
+      background-color: white;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  &__search-icon {
+    padding: 2%;
+    display: flex;
+    background-color: $color-button;
+    color: $color-text;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &__temp {
+    font-size: 9vw;
+    &--symbol {
+      font-size: 4vw;
+    }
+  }
+  &__name {
+    font-size: 2.5vw;
+  }
+  &__date {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-today-container {
+    &__temp {
+      font-size: 15vw;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &--symbol {
+        font-size: 10vw;
+      }
+    }
+    &__name {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 5vw;
+    }
+    &__date {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 3vw;
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .weather-today-container {
+    &__temp {
+      font-size: 20vw;
+      &--symbol {
+        font-size: 10vw;
+      }
+    }
+    &__name {
+      font-size: 10vw;
+    }
+    &__date {
+      font-size: 5vw;
+    }
+  }
+}
