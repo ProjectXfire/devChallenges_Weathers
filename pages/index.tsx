@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 // Services
-import { getList, getListProxy } from "@services/requests";
+import { getListProxy } from "@services/requests";
 // Components
 import { WeatherToday } from "@components/weatherToday";
 import { WeatherForecast } from "@components/weatherForecast";
